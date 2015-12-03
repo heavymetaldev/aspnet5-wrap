@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45": {
+      "wrappedProject": "../../src/Code.Common/Code.Common.csproj",
+      "bin": {
+        "assembly": "../../src/Code.Common/obj/{configuration}/Code.Common.dll",
+        "pdb": "../../src/Code.Common/obj/{configuration}/Code.Common.pdb"
+      }
+    }
+  }
+}
