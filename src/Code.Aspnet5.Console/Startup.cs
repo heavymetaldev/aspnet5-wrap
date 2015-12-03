@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Code.Common;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Http;
 using Microsoft.Framework.DependencyInjection;
@@ -22,7 +23,9 @@ namespace Code.Aspnet5.Console
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                var t = SharedDotNetClass.DoSomething();
+                var msg = $"Did something. result={t}";
+                await context.Response.WriteAsync(msg);
                 
             });
         }
